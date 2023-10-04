@@ -70,7 +70,7 @@ int run_fifo() {
 			if (p < 0) break;
 			
 			if (p == 0) {
-				execlp(progname, progname, "create", socket, code, (char *)NULL);
+				execlp("/proc/self/exe", "/proc/self/exe", "create", socket, code, (char *)NULL);
 				return 1;
 			}
 		}
